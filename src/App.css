@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #100720;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.adviceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  background: hsl(217, 19%, 24%);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.adviceContent {
+  text-align: center;
+}
+
+h2 {
+  color: #00ff7f;
+}
+p {
+  color: #efefef;
+}
+
+.btn {
+  background: linear-gradient(to bottom right, #00b359, #00ff7f);
+  border: 0;
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.btn:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(0, 179, 89, 0.5),
+    0.125rem 0.125rem 1rem rgba(0, 255, 127, 0.5);
+}
+
+.btn:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(0, 255, 127, 0.5),
+    0.125rem 0.125rem 1rem rgba(0, 179, 89, 0.5);
+}
