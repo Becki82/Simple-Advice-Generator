@@ -15,7 +15,7 @@ Simple advice generator
 where a new piece of advice wiill be generated each time the button is clicked
 
 ## Link
-- Live site Url <a href="[/blank](https://beckissimpleadvicegenerator.netlify.app/)">here</a>
+- Live site Url <a href="https://beckissimpleadvicegenerator.netlify.app">here</a>
 
 ## Improvements to be made
 - Clean up of code used
