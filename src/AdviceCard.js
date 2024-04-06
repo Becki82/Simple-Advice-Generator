@@ -3,22 +3,25 @@ import "./App.css";
 
 export const AdviceCard = () => {
   const [advice, setAdvice] = useState(null);
+  const [adviceCount, setAdviceCount] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const fetchAdvice = async () => {
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
+    setLoading(true);
+    setError(null);
 
-    await fetch("https://api.adviceslip.com/advice", requestOptions)
+    await fetch("https://api.adviceslip.com/advice")
       .then((response) => response.json())
       .then((result) => {
-        console.log(result.slip.advice);
         setAdvice(result.slip.advice);
+        setAdviceCount(result.slip.id);
         setLoading(false);
       })
-      .catch((error) => console.log("error", error));
+      .catch((error) => {
+        setLoading(false);
+        setError(error);
+      });
   };
 
   useEffect(() => {
@@ -26,18 +29,35 @@ export const AdviceCard = () => {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="adviceContainer">
-          <div className="adviceContent">
-            <h2>Advice of the day...</h2>
-            {loading ? <p className="loader">Loading...</p> : <p>{advice}</p>}
-            <button className="btn" onClick={fetchAdvice}>
-              More Advice
-            </button>
-          </div>
-        </div>
-      </header>
+    <div className="advice-card">
+      <h2 className="advice-card__title">
+        {loading ? (
+          <div className="skeleton-line__title"></div>
+        ) : (
+          `Advice #${adviceCount}`
+        )}
+      </h2>
+      <div className="advice-card__content">
+        {loading ? (
+          <div className="skeleton-line__content"></div>
+        ) : (
+          <h3>{advice}</h3>
+        )}
+      </div>
+      <button
+        disabled={loading}
+        className="advice-card--button"
+        onClick={fetchAdvice}
+      >
+        More Advice
+      </button>
+      <div className="advice-card__error__container">
+        {error ? (
+          <span className="advice-card__error">
+            Uh Oh, no advice available, please try again later
+          </span>
+        ) : null}
+      </div>
     </div>
   );
 };
