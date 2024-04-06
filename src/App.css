@@ -7,7 +7,6 @@
   --green: #4de09c;
   --red: #d32f2f;
   --grey: #949494;
-  --strongBlue: #d2e6ec;
 }
 
 body {
@@ -17,7 +16,7 @@ body {
 
 h3 {
   font-size: 2rem;
-  color: var(--strongBlue);
+  color: #d2e6ec;
   letter-spacing: 0.1rem;
   padding: 0.5rem;
 }
@@ -43,7 +42,7 @@ h3 {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
-.advice-card--button {
+.advice-card__button {
   background-color: var(--brightGreen);
   color: var(--blueBlack);
   border-radius: 10px;
@@ -56,15 +55,15 @@ h3 {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
 }
-.advice-card--button:not(:disabled):hover {
+.advice-card__button:not(:disabled):hover {
   background-color: var(--blueBlack);
   color: var(--brightGreen);
 }
-.advice-card--button:disabled {
+.advice-card__button:disabled {
   cursor: not-allowed;
   opacity: 0.6;
 }
-.advice-card__error__container {
+.advice-card__error-container {
   padding: 2rem 1rem 0;
 }
 .advice-card__error {
@@ -74,18 +73,18 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
 }
-.skeleton-line__title,
-.skeleton-line__content {
+.advice-card__title-skeleton,
+.advice-card__content-skeleton {
   margin: 0 auto;
   background-color: var(--grey);
   border-radius: 4px;
   margin-bottom: 10px;
 }
-.skeleton-line__title {
+.advice-card__title-skeleton {
   height: 20px;
   width: 40%;
 }
-.skeleton-line__content {
+.advice-card__content-skeleton {
   height: 30px;
   width: 100%;
 }

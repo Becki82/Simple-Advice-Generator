@@ -32,26 +32,26 @@ export const AdviceCard = () => {
     <div className="advice-card">
       <h2 className="advice-card__title">
         {loading ? (
-          <div className="skeleton-line__title"></div>
+          <div className="advice-card__title-skeleton"></div>
         ) : (
           `Advice #${adviceCount}`
         )}
       </h2>
       <div className="advice-card__content">
         {loading ? (
-          <div className="skeleton-line__content"></div>
+          <div className="advice-card__content-skeleton"></div>
         ) : (
           <h3>{advice}</h3>
         )}
       </div>
       <button
         disabled={loading}
-        className="advice-card--button"
+        className="advice-card__button"
         onClick={fetchAdvice}
       >
         More Advice
       </button>
-      <div className="advice-card__error__container">
+      <div className="advice-card__error-container">
         {error ? (
           <span className="advice-card__error">
             Uh Oh, no advice available, please try again later
