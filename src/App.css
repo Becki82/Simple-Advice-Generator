@@ -7,6 +7,7 @@
   --green: #4de09c;
   --red: #d32f2f;
   --grey: #949494;
+  --lightGrey: #d2e6ec;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
 
 h3 {
   font-size: 2rem;
-  color: #d2e6ec;
+  color: var(--lightGrey);
   letter-spacing: 0.1rem;
   padding: 0.5rem;
 }
