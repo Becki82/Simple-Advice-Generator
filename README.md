@@ -16,18 +16,22 @@ where a new piece of advice wiill be generated each time the button is clicked
 
 ## Link
 - Live site Url <a href="https://beckissimpleadvicegenerator.netlify.app">here</a>
+![Screenshot 2024-04-06 at 12 29 02](https://github.com/Becki82/Simple-Advice-Generator/assets/84802516/60b7e98f-dd4f-4616-98b7-266ee25d0dea)
+
 
 ## Improvements to be made
-- Clean up of code used
-- further functionality 
-    - date to be shown
-    - number of advice
-    - ability to save favourite advice 
+
+- Clean up of code used - put loading/advice into components
+  
+- Further functionality to add
+    - date to be shown in the advice title
+    - copy to clipboard
+ 
 - Styling clean up 
     - amend font family and sizing
     - update favicon
-    - remove "loading.." and add loading animation
-    - improve button states and general styling
+    - Change button text to an icon
+    - Improve skeleton loading styling
 
 ### Built with
 
